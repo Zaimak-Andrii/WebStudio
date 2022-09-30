@@ -1,0 +1,75 @@
+.features {
+  @include breakpoint(desktop) {
+    padding-bottom: 0;
+  }
+}
+
+.features__title {
+  @include visibilityHidden();
+}
+
+.features__list {
+  @extend %list;
+
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.features__item {
+  @include breakpoint(false, tablet) {
+    &:not(:nth-child(1)) {
+      margin-top: spacing(3);
+    }
+  }
+
+  @include breakpoint(tablet, desktop) {
+    @include setFlexBasisAndGap(2, spacing(3), spacing(3));
+  }
+
+  @include breakpoint(desktop) {
+    @include setFlexBasisAndGap(4, spacing(3));
+  }
+}
+
+/* ===============================Icon============================== */
+.features__thumb {
+  width: 100%;
+  margin-bottom: spacing(3);
+  padding-top: spacing(2.5);
+  padding-bottom: spacing(2.5);
+
+  background: getColor(whisper);
+  border-radius: 4px;
+}
+
+.features__icon {
+  @extend %icon;
+
+  width: 100%;
+  height: 70px;
+}
+/* ================================================================= */
+
+.features__subtitle {
+  @extend %title;
+
+  margin-bottom: spacing(1);
+
+  font-weight: 700;
+  @include setFont(14, 16);
+  text-transform: uppercase;
+
+  color: getColor(mine-shaft);
+
+  @include breakpoint(false, tablet) {
+    text-align: center;
+  }
+}
+
+.features__text {
+  @extend %paragraph;
+
+  @include setFont(14, 24);
+}

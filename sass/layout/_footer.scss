@@ -1,0 +1,122 @@
+.page-footer {
+  padding-top: spacing(6);
+  padding-bottom: spacing(6);
+
+  color: getColor(white);
+
+  background-color: getColor(tuna);
+
+  @include breakpoint(false, desktop) {
+    text-align: center;
+  }
+}
+
+.page-footer__wrapper {
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+}
+
+.page-footer__title {
+  @extend %title;
+
+  margin-bottom: spacing(2);
+
+  font-weight: 700;
+  @include setFont(14, 16);
+  text-transform: uppercase;
+}
+
+//==============================================Navigation===================================
+.page-footer__nav {
+  @include breakpoint(tablet, desktop) {
+    flex-grow: 1;
+  }
+}
+.page-footer__contacts {
+  margin-top: spacing(2);
+
+  font-style: normal;
+}
+//==============================================Socials======================================
+.page-footer__socials {
+  @include breakpoint(false, tablet) {
+    margin-top: spacing(6);
+  }
+
+  @include breakpoint(tablet, desktop) {
+    flex-grow: 1;
+  }
+
+  @include breakpoint(desktop) {
+    margin-left: spacing(7);
+  }
+}
+//==============================================Subscription=================================
+.subscription__container {
+  @include breakpoint(desktop) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.page-footer__subscription {
+  @include breakpoint(false, desktop) {
+    margin-top: spacing(6);
+  }
+
+  @include breakpoint(tablet, desktop) {
+    flex-grow: 2;
+  }
+
+  @include breakpoint(desktop) {
+    margin-left: auto;
+  }
+}
+
+.subscription__input {
+  @extend %input;
+
+  padding: spacing(1.5) spacing(1.6);
+
+  max-width: 450px;
+  width: 100%;
+
+  @include setFont(16, 20);
+  color: rgba(white, 0.6);
+
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid getColor(white, 0.3);
+
+  @include setTransition(border-color);
+
+  &::placeholder {
+    @include setFont(16, 20);
+    color: rgba(white, 0.6);
+  }
+
+  &:focus {
+    border-color: getColor(dodger-blue);
+  }
+
+  @include breakpoint(false, desktop) {
+    margin-bottom: spacing(2);
+  }
+  @include breakpoint(tablet) {
+    min-width: 358px;
+  }
+}
+//==============================================Button=======================================
+.page-footer__button {
+  @include breakpoint(false, desktop) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include breakpoint(desktop) {
+    margin-left: spacing(1.2);
+  }
+}

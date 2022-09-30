@@ -1,0 +1,75 @@
+@mixin visibilityHidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin breakpoint($from, $to: false) {
+  @if not $to {
+    @media screen and (min-width: getBreakpoint(#{$from})) {
+      @content;
+    }
+  } @else if not $from {
+    @media screen and (max-width: calc(getBreakpoint(#{$to}) - 1px)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: getBreakpoint(#{$from})) and (max-width: calc(getBreakpoint(#{$to}) - 1px)) {
+      @content;
+    }
+  }
+}
+
+/*
+* Set font size and line height in multyplier.
+*
+* $fs - font size without pixels
+* $lh - line height without pixels
+*/
+@mixin setFont($fs, $lh) {
+  font-size: $fs + px;
+  line-height: calc($lh / $fs);
+}
+
+@mixin setBackground($url) {
+  $bg-gradient-overlay: linear-gradient(to bottom, getColor(tuna, 0.4), getColor(tuna, 0.4));
+
+  background-image: $bg-gradient-overlay, url($url + '.jpg');
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: $bg-gradient-overlay, url($url + '@2x.jpg');
+  }
+}
+
+@mixin setTransition($args...) {
+  $transitions: ();
+  @each $arg in $args {
+    $transitions: append($transitions, $arg $animation-duration $animation-function, comma);
+  }
+  transition: $transitions;
+}
+
+@mixin setFlexBasisAndGap($col, $colGap, $rowGap: false) {
+  flex-basis: calc((100% - ($col - 1) * $colGap) / $col);
+
+  @if $rowGap {
+    &:nth-child(n + #{$col + 1}) {
+      margin-top: spacing(3);
+    }
+  }
+
+  &:not(:nth-child(#{$col + n})) {
+    margin-right: $colGap;
+  }
+}
