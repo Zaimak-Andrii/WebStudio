@@ -6,7 +6,7 @@
 }
 
 // ========================================Filter===================================
-.works__filter-list {
+.works-filter__list {
   @extend %list;
 
   display: flex;
@@ -29,7 +29,7 @@
   }
 }
 
-.works__filter-item {
+.works-filter__item {
   &:not(:last-child) {
     margin-right: spacing(0.8);
   }

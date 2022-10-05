@@ -85,7 +85,7 @@
   }
 }
 //=========================================Contacts==============================
-.header__contacts {
+.header-contacts {
   @extend %list;
 
   margin-left: auto;
@@ -99,7 +99,7 @@
   }
 }
 
-.header__contacts-item {
+.header-contacts__item {
   @include breakpoint(tablet, desktop) {
     &:first-child {
       margin-bottom: spacing(1);
@@ -112,7 +112,7 @@
   }
 }
 
-.header__contacts-link {
+.header-contacts__link {
   @extend %link;
 
   display: flex;
@@ -129,7 +129,7 @@
   }
 }
 
-.header__contacts-icon {
+.header-contacts__icon {
   @extend %icon;
 
   margin-right: spacing(0.8);
