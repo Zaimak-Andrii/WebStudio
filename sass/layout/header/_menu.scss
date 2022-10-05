@@ -58,19 +58,19 @@
 }
 
 // Navigation
-.mobile-menu__nav {
+.mobile-nav {
   @extend %list;
 
   margin-bottom: auto;
 }
 
-.mobile-menu__nav-item {
+.mobile-nav__item {
   &:not(:last-child) {
     margin-bottom: spacing(3.2);
   }
 }
 
-.mobile-menu__nav-link {
+.mobile-nav__link {
   @extend %link;
 
   font-weight: 500;
@@ -89,19 +89,19 @@
 }
 // Contacts
 
-.mobile-menu__contacts {
+.mobile-contacts {
   @extend %list;
 
   margin-bottom: spacing(6.4);
 }
 
-.mobile-menu__contacts-item {
+.mobile-contacts__item {
   &:not(:last-child) {
     margin-bottom: spacing(3.2);
   }
 }
 
-.mobile-menu__contacts-link {
+.mobile-contacts__link {
   @extend %link;
 
   font-weight: 500;
@@ -116,7 +116,7 @@
 }
 
 // Socials
-.mobile-menu__socials {
+.mobile-socials {
   @extend %list;
 
   display: flex;
@@ -124,7 +124,7 @@
   justify-content: flex-start;
 }
 
-.mobile-menu__socials-item {
+.mobile-socials__item {
   display: flex;
   align-items: center;
 
@@ -144,7 +144,7 @@
   }
 }
 
-.mobile-menu__socials-link {
+.mobile-socials__link {
   @extend %link;
 
   font-weight: 500;
