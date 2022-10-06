@@ -477,6 +477,7 @@ summary {
 @media screen and (max-width: 767px) {
   .modal {
     width: calc(100vw - 30px);
+    max-width: 450px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1335,10 +1336,9 @@ summary {
 }
 
 .form__checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inherit;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .form__checkbox-input {
@@ -1355,10 +1355,11 @@ summary {
 }
 
 .form__checkbox-container {
-  display: block;
+  display: inline-block;
   position: relative;
   min-width: 16px;
   min-height: 15px;
+  vertical-align: middle;
   color: transparent;
   border-radius: 3px;
   border: 2px solid #212121;

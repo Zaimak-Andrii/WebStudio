@@ -38,6 +38,7 @@
 
   @include breakpoint(false, tablet) {
     width: calc(100vw - 30px);
+    max-width: 450px;
   }
 
   @include breakpoint(tablet, desktop) {

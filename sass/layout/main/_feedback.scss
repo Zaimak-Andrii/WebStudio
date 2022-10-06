@@ -95,11 +95,11 @@
 
 // Checkbox
 .form__checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inherit;
 
   margin-bottom: spacing(3);
+
+  text-align: center;
 }
 
 .form__checkbox-input {
@@ -107,12 +107,13 @@
 }
 
 .form__checkbox-container {
-  display: block;
+  display: inline-block;
   position: relative;
 
   min-width: 16px;
   min-height: 15px;
 
+  vertical-align: middle;
   color: transparent;
 
   border-radius: 3px;
