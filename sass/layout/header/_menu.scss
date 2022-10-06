@@ -14,7 +14,7 @@
   @include setTransition(color);
 
   &:hover,
-  :focus {
+  &:focus {
     color: getColor(dodger-blue);
   }
 
