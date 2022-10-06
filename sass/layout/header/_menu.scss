@@ -35,7 +35,7 @@
   flex-direction: column;
 
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   padding: spacing(4.8) spacing(4);
 
   background-color: getColor(white);
@@ -112,6 +112,10 @@
     @include setFont(34, 40);
 
     color: getColor(dodger-blue);
+
+    @include breakpoint(false, mobile) {
+      font-size: 27px;
+    }
   }
 }
 
@@ -152,4 +156,8 @@
   letter-spacing: 0.02em;
 
   color: getColor(dodger-blue);
+
+  @include breakpoint(false, mobile) {
+    font-size: 10px;
+  }
 }
