@@ -11,7 +11,7 @@
   }
 }
 
-.page-footer__wrapper {
+.page-footer__container {
   @include breakpoint(tablet) {
     display: flex;
     flex-wrap: wrap;

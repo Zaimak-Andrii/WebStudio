@@ -344,7 +344,7 @@ summary {
   margin-left: 12px;
 }
 
-.wrapper {
+.container {
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
@@ -352,12 +352,12 @@ summary {
   padding-right: 15px;
 }
 @media screen and (min-width: 768px) {
-  .wrapper {
+  .container {
     max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .wrapper {
+  .container {
     max-width: 1200px;
   }
 }
@@ -520,7 +520,7 @@ summary {
 }
 
 @media screen and (min-width: 768px) {
-  .page-footer__wrapper {
+  .page-footer__container {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -651,12 +651,12 @@ summary {
   border-bottom: 1px solid #ececec;
 }
 
-.header__wrapper {
+.header__container {
   display: flex;
   align-items: center;
 }
 @media screen and (max-width: 767px) {
-  .header__wrapper {
+  .header__container {
     padding-top: 10px;
     padding-bottom: 10px;
   }
