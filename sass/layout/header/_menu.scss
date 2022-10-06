@@ -7,6 +7,8 @@
   width: 40px;
   height: 40px;
 
+  color: getColor(mine-shaft);
+
   background-color: transparent;
 
   @include setTransition(color);
