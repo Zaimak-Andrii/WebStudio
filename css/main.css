@@ -1525,7 +1525,7 @@ summary {
 }
 @media screen and (min-width: 768px) {
   .works__content {
-    flex: 1 0 auto;
+    flex-grow: 1;
   }
 }
 
