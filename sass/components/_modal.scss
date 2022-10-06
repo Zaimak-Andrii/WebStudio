@@ -44,6 +44,10 @@
   @include breakpoint(tablet, desktop) {
     width: 450px;
   }
+
+  @include breakpoint(desktop) {
+    width: 528px;
+  }
 }
 
 // Button
