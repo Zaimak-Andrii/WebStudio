@@ -1,5 +1,10 @@
-@function getBreakpoint($key) {
-  @return map-get($breakpoints, $key);
+@function getBreakpoint($value) {
+  // Перевірка на знаходження точки перелому, якщо немає то це число у px
+  @if not map-has-key($breakpoints, $value) {
+    @return $value;
+  }
+
+  @return map-get($breakpoints, $value);
 }
 
 @function getColor($key, $alpha: 1) {

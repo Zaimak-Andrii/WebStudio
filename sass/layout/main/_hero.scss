@@ -12,11 +12,11 @@
   background-size: cover;
   background-position: center;
 
-  @include breakpoint(tablet) {
+  @include breakpoint(481px) {
     @include setBackground('../images/bg-solutions-tablet');
   }
 
-  @include breakpoint(desktop) {
+  @include breakpoint(769px) {
     padding-top: spacing(20);
     padding-bottom: spacing(20);
     max-width: 1600px;
