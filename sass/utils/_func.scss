@@ -1,5 +1,10 @@
+/// Get breakpoint value by name or px.
+///
+/// @param { number | string} $value - Содержит имя перелома или значение в пикселях.
+///
+/// @return {number} - Число в пикселях.
 @function getBreakpoint($value) {
-  // Перевірка на знаходження точки перелому, якщо немає то це число у px
+  // Проверка на нахождение точки перелома в списке, если ее нет, то возвращает число в пикселях.
   @if not map-has-key($breakpoints, $value) {
     @return $value;
   }
